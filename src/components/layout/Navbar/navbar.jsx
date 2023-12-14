@@ -58,8 +58,6 @@ export const Header = () => {
         }
     };
     useEffect(() => {
-        console.log(searchCategory);
-        // localStorage.setItem('category',searchCategory)
     }, [searchCategory]);
     //   for text
     useEffect(() => {

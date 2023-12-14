@@ -109,7 +109,11 @@
 		"part14": "about this item",
 		"part15": "share at",
 		"part16": "Added To Cart !",
-		"part17": "Quantity Increase by "
+		"part17": "Quantity Increase by ",
+		"part18":"safe transaction",
+		"part19":"returnable in 15 days",
+		"part20":"cash on delivery",
+		"part21":"free shipping"
 	},
 	"prime": {
 		"part1": "Yes, I want FREE Delivery",
@@ -124,7 +128,9 @@
 		"part10": "Payment",
 		"part11": "Secure transaction",
 		"part12": "Ships from",
-		"part13": "Sold by"
+		"part13": "Sold by",
+		"part14": "out of stock",
+        "part15": "quantity"
 	},
 	"ask": {
 		"part1": "Looking for specific info?",

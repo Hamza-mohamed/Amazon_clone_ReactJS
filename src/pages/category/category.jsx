@@ -53,7 +53,7 @@ export const Category = () => {
     }, [categoryID, navigate, currentPage]);
 
     let fetchProducts = async (params) => {
-        console.log(currentPage, params);
+        // console.log(currentPage, params);
         setLoading(true);
         // console.log(params);
         try {
@@ -69,12 +69,11 @@ export const Category = () => {
                 .then((res) => {
                     // console.log(res);
                     setCategoryProducts(res.data.data);
-                    console.log(res.data.results);
+                    // console.log(res.data.results);
                     setProductLength(res.data.results);
                     setPagination(res.data.pagination);
                     setLoading(false);
 
-                    console.log(res.data.pagination);
                 });
         } catch (error) {
             setLoading(false);
@@ -108,7 +107,7 @@ export const Category = () => {
     };
     const handlePriceChange = (event) => {
         setPrice(event.target.value);
-        console.log(price);
+        // console.log(price);
     };
 
     const handleRatingChange = (event) => {
@@ -129,7 +128,7 @@ export const Category = () => {
 
     const handleSorting = (event) => {
         setSorting(event.target.value);
-        console.log(event.target.value);
+        // console.log(event.target.value);
     };
 
     useEffect(() => {
@@ -139,10 +138,10 @@ export const Category = () => {
     let params = [];
     const applyFilters = () => {
         if (price <= 10000 && price !== "") {
-            console.log(price);
+            // console.log(price);
             params["price[lte]"] = price;
         } else if (price > 10000) {
-            console.log(price);
+            // console.log(price);
             params["price[gte]"] = price;
         }
         if (rating) {
@@ -196,7 +195,6 @@ export const Category = () => {
     }, [categoryID, navigate]);
 
     const handlePageClick = (data) => {
-        console.log(data.selected + 1);
         setCurrentPage(data.selected + 1);
     };
 

@@ -16,7 +16,6 @@ export const totalPriceAction = createAsyncThunk(
             dispatch(changeLoader(false));
             return res.data.numOfCartItems;
         } catch (error) {
-            console.log(error);
             dispatch(changeLoader(false));
             return 0;
         }

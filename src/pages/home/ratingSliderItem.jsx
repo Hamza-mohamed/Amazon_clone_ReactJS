@@ -21,7 +21,6 @@ export default function RatingSliderItem(props) {
             .get(`${props.url}?limit=${props.limit}&skip=${props.skip}`)
             // .get(`/products/categoryPrd/65527ac3376a52ea210d9706?limit=${props.limit}&skip=${props.skip}`)
             .then((res) => {
-                console.log(res.data.data);
                 setProducts(res.data.data);
                 setLoading(false);
             })

@@ -50,8 +50,8 @@ const ProductDetails = () => {
         const isProductIncart = cartPage.some(
             (item) => item.product._id === product._id
         );
-        console.log(cartPage);
-        console.log(isProductIncart);
+        // console.log(cartPage);
+        // console.log(isProductIncart);
         if (!isProductIncart) {
             dispatch(addToCart({ product: product, quantity: quantity }));
             toast.success(`${t("prodInfo.part16")}`, {
@@ -85,7 +85,7 @@ const ProductDetails = () => {
                 quantity: quantity,
             },
         ];
-        console.log(items);
+        // console.log(items);
 
         instance
             .post(
@@ -100,12 +100,12 @@ const ProductDetails = () => {
                 }
             )
             .then((res) => {
-                console.log(res.status);
+                // console.log(res.status);
                 toast.success(`${t("prodInfo.part16") + " " + quantity}`, {
                     position: "bottom-left",
                 });
                 // Handle 401 Unauthorized error here
-                console.log(res.status);
+                // console.log(res.status);
                 // You might want to redirect to login or refresh token, etc.
 
                 dispatch(changeLoader(false));
@@ -125,8 +125,8 @@ const ProductDetails = () => {
             .get(`/products/${id}`)
             .then((res) => {
                 setmyProd(res.data.data);
-                console.log(myProd);
-                console.log(res.data.data);
+                // console.log(myProd);
+                // console.log(res.data.data);
                 setLoading(false);
                 // console.log(res.data);
             })

@@ -19,7 +19,7 @@ export const Sugessions = (props) => {
         instance.get(`/products/randoms/${props.number}`).then((res) => {
             setProducts(res.data.data);
             setLoading(false);
-            console.log(res.data.data);
+            // console.log(res.data.data);
         });
     }, []);
 

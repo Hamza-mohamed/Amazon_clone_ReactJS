@@ -7,7 +7,7 @@ export const totalPriceAction = createAsyncThunk(
     async (_, { dispatch }) => {
         dispatch(changeLoader(true));
         try {
-            const res = await axios.get("http://localhost:3333/cart", {
+            const res = await axios.get(`${import.meta.env.VITE_BASE_UR}/cart`, {
                 headers: {
                     Authorization: localStorage.getItem("userToken"),
                 },

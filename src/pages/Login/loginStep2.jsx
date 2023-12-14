@@ -63,7 +63,7 @@ const LoginStep2 = () => {
                 };
                 console.log(setLog);
                 const { data } = await axios.post(
-                    "http://localhost:3333/api/user/login",
+                    `${import.meta.env.VITE_BASE_URL}api/user/login`,
                     setLog
                 );
                 if (data.message == "welcome to our site ") {

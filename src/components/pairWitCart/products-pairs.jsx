@@ -21,7 +21,6 @@ export const ProductsSide = (props) => {
         instance.get(`/products/randoms/${4}`).then((res) => {
             setProducts(res.data.data);
             setLoading(false);
-            console.log(res.data.data);
         });
     }, []);
 

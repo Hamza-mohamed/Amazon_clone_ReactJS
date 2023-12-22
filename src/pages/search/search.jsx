@@ -43,7 +43,7 @@ export const Search = () => {
         console.log("dttseresdfsfdsd");
         await axios
             .post(
-                `${import.meta.env.VITE_BASE_URL}products/result?search=${searchValue}`,
+                `${import.meta.env.VITE_REACT_APP_BASE_URL}products/result?search=${searchValue}`,
                 {
                     category: category,
                     lang: lang,

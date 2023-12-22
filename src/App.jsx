@@ -29,7 +29,7 @@ import { SubSubcategory } from "./pages/subSubCategory/subSubcategory";
 import { ButtonToTop } from "./components/button/buttonToTop";
 import NotFound from "./pages/not-found/not-found";
 
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_KEY);
+const stripePromise = loadStripe(import.meta.env.VITE_REACT_APP_STRIPE_KEY);
 
 const router = createBrowserRouter([
     { path: "/", element: <Home /> },

@@ -30,22 +30,6 @@ export const Category = () => {
     const [currentPage, setCurrentPage] = useState("1");
     const { t } = useTranslation();
 
-    // useEffect(() => {
-    //     document.title = `Amazon - ${categoryName}`;
-    //     window.scrollTo({ top: 0, behavior: "smooth" });
-    //     instance
-    //         .get(`products/category/${categoryID}`)
-    //         .then((res) => {
-    //             // console.log(res.data.products);
-    //             setCategoryProducts(res.data.data);
-    //             // console.log(res.data.data);
-    //         })
-    //         .catch((err) => {
-    //             navigate("/");
-    //         });
-    // }, [categoryID, navigate, categoryName]);
-    // console.log(categoryname);
-
     useEffect(() => {
         document.title = `Amazon`;
         window.scrollTo({ top: 0, behavior: "smooth" });

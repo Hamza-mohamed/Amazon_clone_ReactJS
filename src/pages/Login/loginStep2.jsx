@@ -63,7 +63,7 @@ const LoginStep2 = () => {
                 };
                 console.log(setLog);
                 const { data } = await axios.post(
-                    `${import.meta.env.VITE_BASE_URL}api/user/login`,
+                    `https://nodejsapi-amazonclone.onrender.com/api/user/login`,
                     setLog
                 );
                 if (data.message == "welcome to our site ") {

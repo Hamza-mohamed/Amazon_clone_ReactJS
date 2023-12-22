@@ -18,7 +18,6 @@ export const Search = () => {
     const [notFound, setNotFound] = useState("");
     if (location.state !== null || location.state !== "") {
         var { searchValue } = location?.state;
-        console.log(searchValue,"oooooooooooooooooooooooo");
     } else {
         setCategoryProducts([]);
         setNotFound(`product not found  search again .....`);
@@ -40,10 +39,9 @@ export const Search = () => {
     }, [category, searchValue, notFound]);
 
     const searchfunc = async () => {
-        console.log("dttseresdfsfdsd");
         await axios
             .post(
-                `${import.meta.env.VITE_REACT_APP_BASE_URL}products/result?search=${searchValue}`,
+                `https://nodejsapi-amazonclone.onrender.com/products/result?search=${searchValue}`,
                 {
                     category: category,
                     lang: lang,
@@ -54,14 +52,11 @@ export const Search = () => {
                 // console.log(res.data.products);
                 // console.log(rasult[1]);
                 if (res.data.data.length > 0) {
-                    console.log("search done");
                     setNotFound("");
                     setCategoryProducts(res.data.data);
                     setFilteredProducts(res.data.data);
                     setCategoryProdBrand(res.data.data);
-                    console.log(res.data.data, "next");
                 } else {
-                    console.log("hhhhhhhhhhh");
                     setCategoryProducts([]);
                     setFilteredProducts([]);
                     setNotFound(`${t("search.part7")}`);
@@ -69,7 +64,6 @@ export const Search = () => {
                 }
             })
             .catch((err) => {
-                console.log("error",err);
                 setNotFound(`${t("search.part7")}`);
             });
     };

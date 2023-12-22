@@ -82,7 +82,7 @@ const CheckOut = () => {
     if (payMethod == "card" && !hasErrors) {
       try {
         const pamentIntent = await axios.post(
-          `${import.meta.env.VITE_REACT_APP_BASE_URL}order/card`,
+          `https://nodejsapi-amazonclone.onrender.com/order/card`,
           {
             amount: totalPrice * 100,
             orderData,
@@ -114,7 +114,7 @@ const CheckOut = () => {
     } else if (payMethod == "cash" && !hasErrors) {
       const pamentIntent = await axios
         .post(
-          `${import.meta.env.VITE_REACT_APP_BASE_URL}order/cash`,
+          `https://nodejsapi-amazonclone.onrender.com/order/cash`,
           {
             amount: totalPrice,
             orderData,

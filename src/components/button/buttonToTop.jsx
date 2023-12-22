@@ -26,11 +26,7 @@ export const ButtonToTop = () => {
     }, []);
 
     const scrollToTop = () => {
-        const c = document.documentElement.scrollTop || document.body.scrollTop;
-        if (c > 0) {
-            window.requestAnimationFrame(scrollToTop);
-            window.scrollTo(0, c - c / 8); // Adjust the divisor (8) for smoother/faster scrolling
-        }
+   window.scrollTo({top:0,behavior:'smooth'})
     };
     return (
         <div

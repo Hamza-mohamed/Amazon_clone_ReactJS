@@ -6,7 +6,6 @@ import "./i18n";
 import Spinner from "react-bootstrap/Spinner";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-	<React.StrictMode>
 		<Suspense
 			fallback={
 				<div className='m-auto d-flex vh-100'>
@@ -19,5 +18,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 			}>
 			<App />
 		</Suspense>
-	</React.StrictMode>
 );
